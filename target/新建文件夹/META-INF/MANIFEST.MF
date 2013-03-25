@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: jiangshuguang
+Build-Jdk: 1.6.0_22
+Main-Class: com.baidu.jstest.Main
+Class-Path: jetty-server-8.0.0.M2.jar servlet-api-3.0.20100224.jar jet
+ ty-continuation-8.0.0.M2.jar jetty-http-8.0.0.M2.jar jetty-io-8.0.0.M
+ 2.jar jetty-servlet-8.0.0.M2.jar jetty-webapp-8.0.0.M2.jar jetty-xml-
+ 8.0.0.M2.jar jetty-util-8.0.0.M2.jar jetty-servlet-8.0.0.M2.jar jetty
+ -security-8.0.0.M2.jar junit-4.8.2.jar slf4j-simple-1.6.1.jar slf4j-a
+ pi-1.6.1.jar json-20090211.jar freemarker-2.3.16.jar
+

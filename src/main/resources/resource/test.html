@@ -1,0 +1,52 @@
+	<html>
+	<head>
+    	<title>E4X</title>
+    	<script type="text/javascript">
+    	var xmlDoc;
+    	function clickHandler()
+        {
+//        	 if (window.ActiveXObject)
+//             {
+//            	 xmlDoc = new ActiveXObject("MSXML.DOMDocument");
+//            	 if(xmlDoc == null)
+//                 {
+//                	  window.alert("MSXML.DOMDocument isn't installed.");
+//                 }
+//            	 else
+//            	 {
+//                	   xmlDoc.async=false;
+//                	   xmlDoc.load("note.xml");
+//                	   document.write(xmlDoc.getElementsByTagName("body")[0].firstChild.nodeValue);
+//                }
+//            }
+//        	// code for Mozilla, Firefox, etc.
+//        	else if(document.implementation && document.implementation.createDocument)
+//            	{
+
+
+            	   xmlDoc= document.implementation.createDocument("","doc",null) ;
+                  // var xmlhttp=new wind
+            	   xmlDoc.load("note.xml");
+
+
+
+
+
+
+//            	   xmlDoc.onload=function()//anonymous function
+//                   {
+//                	//    document.write(xmlDoc.getElementsByTagName("body")[0].firstChild.nodeValue);
+//                   }
+//            	}
+        	}
+    	</script>
+
+    	</head>
+
+	<body>
+	<span>nothing</span>
+	<button onclick="javascript:clickHandler()"/>hello, world. </button>
+
+	</body>
+
+	</html>

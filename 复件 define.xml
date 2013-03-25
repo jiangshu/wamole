@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<projects>
+	<invoker name="staf" class="com.baidu.jstest.browser.invoker.STAFInvoker" />
+	<!-- <invoker name="staf" class="com.baidu.jstest.browser.STAFInvoker"></invoker> -->
+	<global-env>
+		<browser name="chrome"
+			path="C:/Documents and Settings/jiangshuguang/Local Settings/Application Data/Google/Chrome/Application/chrome.exe"
+			host="127.0.0.1" invoker="staf" />
+	 	 <browser name="ff" path="C:/Program Files/Mozilla Firefox/firefox.exe" 
+	  	  host="127.0.0.1" invoker="staf" /> 
+		 <browser name="ie6" 
+		   path="C:/Program Files/Internet Explorer/IEXPLORE.EXE" host="127.0.0.1" 
+	 	   invoker="staf" /> 
+		<!-- <browser name="safari" path="C:/Program Files/Safari/Safari.exe" -->
+		<!-- host="127.0.0.1" invoker="staf" /> -->
+	</global-env>
+	
+	 <project name="t">
+		<env>
+			<browser ref="chrome" />
+		    <browser ref="ff" />  
+		    <browser ref="ie6" /> 
+		</env>
+		<property name="base.dir" value="E:/Tangram/Tangram2"/>
+		<property name="src.dir" value="${base.dir}/src" />
+		<property name="test.dir" value="${base.dir}/test" />
+		<property name="cov.dir" value="${test.dir}/coverage" />
+		<property name="interval" value="5" />
+		<property name="tool.dir" value="${test.dir}/tools/br/js/" />
+		<resources>
+			<resource value="${tool.dir}/UserAction.js" />
+			<resource value="${tool.dir}/tools.js" />
+			<resource value="${case.dir}/tools.js" />
+		</resources>
+	</project>
+	
+	<project name="tc" depends="t">
+		<env>
+		       <browser ref="ie6" />  
+		       <browser ref="chrome" /> 
+		      <browser ref="ff" />  
+			<!-- <browser ref="safari" /> -->
+		</env>
+		<property name="base.dir" value="E:/Tangram/Magic" />
+		<property name="src.dir" value="${base.dir}/src" />
+		<property name="test.dir" value="${base.dir}/test" />
+		<property name="cov.dir" value="${test.dir}/coverage" />
+	<!--	<property name="release.dir" value="${base.dir}/release/all_release.js" /> -->
+		<property name="tool.dir" value="${test.dir}/tools/br/js/" />
+		<property name="interval" value="5" />
+		<resources>
+			<resource value="${tool.dir}/UserAction.js" />
+			<resource value="${tool.dir}/tools.js" />
+			<resource value="${case.dir}/tools.js" />
+		</resources>
+	</project>
+
+</projects>
